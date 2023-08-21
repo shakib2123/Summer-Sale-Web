@@ -38,10 +38,10 @@
     <header class="bg-amber-50">
 
         <!-- banner section start -->
-        <section class="max-w-[1400px] mx-auto flex gap-8 flex-col-reverse lg:flex-row p-2 justify-center items-center">
+        <section class="max-w-7xl mx-auto flex gap-8 flex-col-reverse lg:flex-row p-2 justify-center items-center">
 
             <!-- banner info -->
-            <div class=" max-w-3xl text-center">
+            <div class="flex-1 max-w-3xl text-center">
 
                 <h2 class="text-3xl font-medium mb-10">---SALE FEVER---</h2>
                 <h1 class="text-5xl lg:text-6xl font-bold mb-10">Purchase TK 200 or above & get <span
@@ -54,7 +54,7 @@
             </div>
 
             <!-- banner image section -->
-            <div>
+            <div class="flex-1">
                 <img class="w-full" src="./images/Summer 1.png" alt="">
             </div>
 
@@ -65,10 +65,10 @@
     <!-- header section end -->
 
     <!-- main section start -->
-    <main class="max-w-[1400px] mx-auto p-3">
+    <main class="max-w-7xl mx-auto p-3">
 
         <!-- card and payment section start -->
-        <section class="my-24 flex flex-col-reverse md:flex-row gap-6">
+        <section class="my-4 lg:my-24 flex flex-col-reverse lg:flex-row gap-6">
 
 
             <!-- card section -->
@@ -81,11 +81,12 @@
 
 
                         <!-- card no. 1 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardOneDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-one" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
@@ -95,33 +96,36 @@
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">K. Accessories</h3>
-                                <p class="text-lg">39.00 TK</p>
+                                <p class="text-lg"><span id="product-price-one">39.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 2 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardTowDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-tow" class="card-body">
 
                                 <p>
-                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+
+                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">K. Accessories</h3>
-                                <p class="text-lg">25.00 TK</p>
+                                <p class="text-lg"><span id="product-price-tow">25.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 3 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardTreeDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-three" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
@@ -131,60 +135,63 @@
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">Home Cooker</h3>
-                                <p class="text-lg">49.00 TK</p>
+                                <p class="text-lg"><span id="product-price-three">49.00</span> TK</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <!-- Sportswear section -->
-                <div class="mt-14">
+                <div class="my-20">
                     <h1 class="font-semibold text-4xl mb-10">Sportswear</h1>
                     <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
 
-                        <!-- card no. 1 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <!-- card no. 2.1 -->
+                        <div onclick="getCardSportOneDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod4.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-sport-one" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">Sports Back Cap</h3>
-                                <p class="text-lg">49.00 TK</p>
+                                <p class="text-lg"><span id="product-price-sport-one">49.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 2 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardSportTowDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod5.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-sport-tow" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">Full Jersey Set</h3>
-                                <p class="text-lg">69.00 TK</p>
+                                <p class="text-lg"><span id="product-price-sport-tow">69.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 3 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardSportThreeDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod6.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-sport-three" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
@@ -194,70 +201,75 @@
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">Sports cates</h3>
-                                <p class="text-lg">159.00 TK</p>
+                                <p class="text-lg"><span id="product-price-sport-three">159.00</span> TK</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <!-- Furniture section -->
-                <div class="mt-14">
+                <div>
                     <h1 class="font-semibold text-4xl mb-10">Furniture</h1>
                     <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
 
                         <!-- card no. 1 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardFurnitureOneDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod7.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-furniture-one" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-regular fa-star text-xl text-amber-500"></i>
                                 </p>
                                 <h3 class="text-lg font-semibold">Single Relax Chair</h3>
-                                <p class="text-lg">185.00 TK</p>
+                                <p class="text-lg"><span id="product-price-furniture-one">185.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 2 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardFurnitureTowDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod8.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-furniture-tow" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+
                                 </p>
                                 <h3 class="text-lg font-semibold">Children play</h3>
-                                <p class="text-lg">299.00 TK</p>
+                                <p class="text-lg"><span id="product-price-furniture-tow">299.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card no. 3 -->
-                        <div class="card card-compact p-8 bg-white shadow-xl text-center">
+                        <div onclick="getCardFurnitureThreeDetails(),getPurchaseAndDiscountCondition()"
+                            class="card card-compact p-8 bg-white  text-center">
                             <div class="bg-base-200 p-4 rounded-xl">
                                 <figure><img src="./images/prod9.png" alt="Shoes" /></figure>
                             </div>
-                            <div class="card-body">
+                            <div id="card-detail-furniture-three" class="card-body">
 
                                 <p>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
                                     <i class="fa-solid fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
-                                    <i class="fa-regular fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+                                    <i class="fa-solid fa-star text-xl text-amber-500"></i>
+
                                 </p>
                                 <h3 class="text-lg font-semibold">Flexible Sofa</h3>
-                                <p class="text-lg">339.00 TK</p>
+                                <p class="text-lg"><span id="product-price-furniture-three">399.00</span> TK</p>
                             </div>
                         </div>
 
@@ -267,7 +279,7 @@
             </div>
 
             <!-- payment section -->
-            <div class="max-w-lg flex justify-center mt-20">
+            <div class="mb-16 flex justify-center mt-20">
 
                 <div>
 
@@ -275,24 +287,27 @@
                     <div class="bg-white rounded-xl p-4">
                         <h2 class="font-semibold text-lg mb-4">Have coupon?</h2>
                         <div class="join rounded-xl">
-                            <input class="input input-bordered join-item" placeholder="Coupon code" />
-                            <button class="btn join-item text-white bg-[#E527B2] hover:bg-[#ff00bb]">Apply</button>
+                            <input id="coupon-field" class="input input-bordered join-item" placeholder="Coupon code" />
+                            <button id="btn-coupon" disabled
+                                class="btn join-item text-white bg-[#E527B2] hover:bg-[#ff00bb]">Apply</button>
                         </div>
                     </div>
 
                     <!-- Make Purchase -->
                     <div class="bg-white mt-6 rounded-xl p-4">
-                        <div id="product-list mb-3">
+                        <div class="font-semibold">
+                            <ol id="product-list" class="space-y-4 list-decimal list-inside text-lg">
 
+                            </ol>
                         </div>
                         <hr>
                         <div class="my-6 space-y-2">
                             <div>
-                                <p class="font-medium text-xl">Total price: <span
+                                <p class="font-medium text-xl">Total price: <span id="total-price"
                                         class="font-semibold text-gray-500">00</span>TK</p>
-                                <p class="font-medium text-xl">Discount : <span
+                                <p class="font-medium text-xl">Discount : <span id="total-discount"
                                         class="font-semibold text-gray-500">00</span>TK</p>
-                                <p class="font-medium text-xl">Total: <span
+                                <p class="font-medium text-xl">Total: <span id="total-amount"
                                         class="font-semibold text-gray-500">00</span>TK
                                 </p>
                             </div>
@@ -300,16 +315,19 @@
                             <hr>
                         </div>
                         <div class="text-center relative -mb-10"><!-- Open the modal using ID.showModal() method -->
-                            <button class="btn w-11/12 rounded-lg bg-[#E527B2] hover:bg-[#ff00bb] text-white"
+                            <button id="btn-purchase" disabled
+                                class="btn w-11/12 rounded-lg bg-[#E527B2] hover:bg-[#ff00bb] text-white"
                                 onclick="my_modal_1.showModal()">Make Purchase</button>
                             <dialog id="my_modal_1" class="modal text-center">
                                 <form method="dialog" class="modal-box">
+                                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                     <img class="mx-auto mb-8" src="./images/congo.png" alt="">
-                                    <h1 class="text-5xl font-bold">Congratulations</h1>
+                                    <h1 class="text-4xl md:text-5xl font-bold">Congratulations</h1>
                                     <p class="py-4 text-lg">Your Purchase the product</p>
                                     <div class="modal-action justify-center">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn bg-[#E527B2] hover:bg-[#ff00bb] text-white rounded-lg">Go
+                                        <button onclick="pageRefresher()"
+                                            class="btn bg-[#E527B2] hover:bg-[#ff00bb] text-white rounded-lg">Go
                                             Home</button>
                                     </div>
                                 </form>
@@ -322,6 +340,8 @@
 
     </main>
     <!-- main section end -->
+
+    <script src="./scripts/index.js"></script>
 
 </body>
 
